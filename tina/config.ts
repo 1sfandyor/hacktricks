@@ -29,9 +29,11 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "docs",
+        label: "Docs",
+        path: "src/app/docs",
+        format: "mdx",
+        match: { include: "**/*.mdx" },
         fields: [
           {
             type: "string",
@@ -48,8 +50,7 @@ export default defineConfig({
           },
         ],
         ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+          router: () => `/docs`,
         },
       },
     ],

@@ -9,5 +9,14 @@ export default withNextra({
         resolveAlias: {
             'next-mdx-import-source-file': './mdx-components.tsx'
         }
+    },
+    async redirects() {
+        return [
+            {
+                source: '/',
+                destination: '/docs',
+                permanent: false
+            }
+        ]
     }
 })
