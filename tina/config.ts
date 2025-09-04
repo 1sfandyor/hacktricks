@@ -4,8 +4,7 @@ import { defineConfig } from "tinacms";
 const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
-  process.env.HEAD ||
-  "main";
+  process.env.HEAD || "main";
 
 export default defineConfig({
   branch,
@@ -31,9 +30,8 @@ export default defineConfig({
       {
         name: "docs",
         label: "Docs",
-        path: "src/app/docs",
+        path: "content/docs",
         format: "mdx",
-        match: { include: "**/*.mdx" },
         fields: [
           {
             type: "string",

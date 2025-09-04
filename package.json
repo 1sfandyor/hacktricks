@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev --turbopack\"",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev --port 9015 -c \"next dev --turbopack\"",
     "build": "tinacms build && next build --turbopack",
     "start": "next start",
     "lint": "eslint",
